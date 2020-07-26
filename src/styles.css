@@ -1,0 +1,137 @@
+body {
+  font-family: "Poppins";
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+/* Headings */
+.big-heading {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+/* Containers */
+.container-fluid {
+  padding: 7% 15%;
+}
+
+/* Sections */
+.colored-section {
+  background-color: #006a71;
+  color: #fff;
+}
+
+.white-section {
+  background-color: white;
+}
+
+/* Navigation Bar */
+#home.navbar {
+  padding: 0 0 4.5rem 0;
+}
+
+.navbar {
+  padding: 0 0 1.5rem 0;
+}
+
+.navbar-brand {
+  font-family: "Fira Sans";
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.profile {
+  font-size: 3rem;
+}
+
+#navigation .container-fluid {
+  padding: 1% 15%;
+  text-align: left;
+}
+
+/* Title Section */
+#title .container-fluid {
+  padding: 3% 15% 7%;
+  text-align: left;
+}
+
+.top-btn {
+  margin: 5% 3% 5% 0;
+}
+
+.get-started.top-btn {
+  background-color: #d3de32;
+  border: 0px solid transparent;
+  color: #006a71;
+}
+
+.get-started.top-btn:hover {
+  background-color: #F7FF87;
+  border: 0px solid transparent;
+  color: #006a71;
+}
+
+.login.top-btn {
+  border: solid 1px #ffffdd;
+  color: #ffffdd;
+}
+
+.login.top-btn:hover {
+  border: solid 1px #ffffdd;
+  background-color: #ffffdd;
+  color: #006a71;
+}
+
+/* Title Image */
+.title-image {
+  width: 350px;
+  height: 350px;
+  position: relative;
+  right: 7%;
+  border-radius: 100%;
+}
+
+/* Features */
+#features {
+  position: relative;
+}
+
+.features-title {
+  font-size: 1.5rem;
+}
+
+.feature-box {
+  padding: 5%;
+}
+
+.features-desc {
+  color: #AFAFAF;
+}
+
+.features-icon {
+  color: #d3de32;
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.features-icon:hover {
+  color: #B5BF25;
+}
+
+/* Footer Section */
+.footer-icon {
+  display: inline-block;
+  font-size: 20px;
+  margin: 10px 10px;
+}
+
+.profile_2 {
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}

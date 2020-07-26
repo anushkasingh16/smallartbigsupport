@@ -1,0 +1,42 @@
+body {
+  text-align: left;
+}
+
+h1,h4 {
+  color: #006a71;
+}
+
+.container-fluid {
+  padding: 5% 15%;
+}
+
+.lead {
+  margin: 30px 0 50px;
+}
+
+.results{
+  margin: 50px 0;
+}
+
+.card {
+  margin-bottom:40px;
+  border: 0 solid #fff;
+}
+
+.card-header{
+  background-color:transparent;
+  border: 0 solid #fff;
+  padding: 0 20px 0 0;
+}
+
+.card-header h4{
+  margin:0;
+}
+
+.card-body{
+  padding-left: 0;
+}
+
+#footer {
+  text-align: center;
+}
