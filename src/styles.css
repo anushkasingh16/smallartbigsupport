@@ -1,6 +1,10 @@
 body {
   font-family: "Poppins";
   text-align: center;
+  background:#006a71;
+  height: 100%;
+  padding:0;
+  margin:0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -24,6 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 .colored-section {
   background-color: #006a71;
   color: #fff;
+  height: 100%;
 }
 
 .white-section {
@@ -58,6 +63,7 @@ h1, h2, h3, h4, h5, h6 {
 #title .container-fluid {
   padding: 3% 15% 7%;
   text-align: left;
+  background-color: #006a71;
 }
 
 .top-btn {
