@@ -3,6 +3,8 @@ import React, {  Component  } from 'react';
 import firebase from 'firebase';
 import firebaseConfig from './firebaseconfig';
 import './styles.css';
+import logo from './Logo.jpg';
+
 var client = firebaseConfig;
 var provider = new firebase.auth.GoogleAuthProvider();
 function signIn()
