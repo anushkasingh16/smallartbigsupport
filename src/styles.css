@@ -130,8 +130,43 @@ h1, h2, h3, h4, h5, h6 {
   margin: 10px 10px;
 }
 
+/* Profile Page CSS */
+
 .profile_2 {
   font-size: 20px;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Get Started Pages CSS */
+.get-started-options{
+  margin-bottom: 70px;
+}
+#get-started{
+  width:70%;
+}
+
+#get-started.container-fluid{
+  padding-bottom:0;
+}
+
+#get-started .lead{
+  margin-bottom: 70px;
+}
+
+#get-started h1, h4{
+  color:#006a71;
+}
+
+#get-started h6{
+  color:#AFAFAF;
+  font-weight:400;
+}
+
+#get-started .lead{
+  color:#AFAFAF;
+}
+
+.btn.google{
+  margin-top:8px;
 }
