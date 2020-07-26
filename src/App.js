@@ -4,7 +4,11 @@ import { BrowserRouter, Route,Switch} from 'react-router-dom';
 import firebase from 'firebase';
 import firebaseConfig from './firebaseconfig';
 import './styles.css';
+import './dashboard.css';
+import './index.css';
+var profileinfo;
 var client = firebaseConfig;
+var database = client.firestore();
 var provider = new firebase.auth.GoogleAuthProvider();
 function signIn()
 {
@@ -17,6 +21,7 @@ class App extends Component{
         <Switch>
           <Route exact={true} path="/" component={Home} />
           <Route exact={true} path="/profile" component={profile} />
+          <Route exact={true} path="/dashboard" component={dashboard}/>
         </Switch>
    </BrowserRouter></div>)
   }
@@ -125,18 +130,18 @@ class profile extends Component {
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous"/>
 
-  <section class="colored-section" id="navigation">
-    <div class="container-fluid">
+  <section className="colored-section" id="navigation">
+    <div className="container-fluid">
 
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="/profile">My Profile</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+      <nav className="navbar navbar-expand-lg navbar-dark">
+        <a className="navbar-brand" href="/profile">My Profile</a>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a  href="./index.html"><img alt="Home" src="./Home.jpg"
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav ml-auto">
+            <li className="nav-item">
+              <a  href="./"><img alt="Home" src="./Home.jpg"
                 width="150" height="85"/></a>
             </li>
           </ul>
@@ -182,21 +187,20 @@ class profile extends Component {
     <label for="other">Other</label>
   </section><br />
 
-  <section class="profile_2">
+  <section className="profile_2">
     <label for="bio">Bio</label> <br />
     <textarea id="extra" name="extra" rows="5" cols="40"></textarea>
   </section><br />
-
   <section class="colored-section" id="cta">
     <button type="button" class="get-started btn btn-lg btn-dark top-btn">Save</button>
   </section>
 
-  <footer class="white-section" id="footer">
-    <div class="container-fluid">
-      <i class="footer-icon fab fa-twitter"></i>
-      <i class="footer-icon fab fa-facebook-f"></i>
-      <i class="footer-icon fab fa-instagram"></i>
-      <i class="footer-icon fas fa-envelope"></i>
+  <footer className="white-section" id="footer">
+    <div className="container-fluid">
+      <i className="footer-icon fab fa-twitter"></i>
+      <i className="footer-icon fab fa-facebook-f"></i>
+      <i className="footer-icon fab fa-instagram"></i>
+      <i className="footer-icon fas fa-envelope"></i>
       <p>© Copyright 2020</p>
     </div>
   </footer>
@@ -207,5 +211,82 @@ class profile extends Component {
     </div>)
   }
 }
+class dashboard extends Component{
+  render(){
+    return (<div>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+      
 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+        <link rel="stylesheet" href="styles.css"/>
+        <link rel="stylesheet" href="dashboard.css"/>
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous"/>
+        <section className="colored-section" id="navigation">
+          <div className="container-fluid">
+
+            <nav className="navbar navbar-expand-lg navbar-dark">
+              <a className="navbar-brand" href="">COMPANY</a>
+              <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+              </button>
+              <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul className="navbar-nav ml-auto">
+                  <li className="nav-item">
+                    <a className="nav-link" href="#footer"><i class="profile fas fa-user-circle"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+      
+          </div>
+        </section>
+      
+        <section>
+          <div className="container-fluid">
+            <h1>Welcome Back!</h1>
+            <p className="lead">
+              Based on your business' needs and the designer's skillset, we've curated a list of potential local freelancers for you to collaborate with.
+            </p>
+            <hr />
+            <div className="results">
+
+              <div className="card">
+                <div className="card-header">
+                  <h4>Jane Smith</h4>
+                </div>
+                <div className="card-body">
+                  <h6 className="card-title"><i class="fas fa-map-marker-alt"></i> Los Angeles, CA 90024</h6>
+                  <h6 className="card-title"><i class="fas fa-star"></i> $30/hour</h6>
+                  <p className="card-text"><strong>Open to work on:</strong> Signs, Banners, and Brochures</p>
+                  <p>Hi, my name is Jane and I am a freelance graphic designer based in LA.
+                    I have experience in designing fliers and pamphlets for print.
+                    I also love chalk-lettering, so if you'd like to put up a menu or signage,
+                    I'm here for you! Looking forward to connect!</p>
+                  <a href="#" className="btn btn-info">Connect with Jane</a>
+                  <a href="#" className="btn btn-outline-info">View Jane's Portfolio</a>
+                </div>
+              </div>
+      
+            </div>
+          </div>
+        </section>
+      
+
+        <footer className="white-section" id="footer">
+          <div className="container-fluid">
+            <i className="footer-icon fab fa-twitter"></i>
+            <i className="footer-icon fab fa-facebook-f"></i>
+            <i className="footer-icon fab fa-instagram"></i>
+            <i className="footer-icon fas fa-envelope"></i>
+            <p>© Copyright 2020</p>
+          </div>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+      </div>)
+  }
+}
 export default App;
