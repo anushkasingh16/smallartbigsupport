@@ -3,6 +3,8 @@ import './App.css';
 import firebase from 'firebase';
 import firebaseConfig from './firebaseconfig';
 import './styles.css';
+import logo from './Logo.jpg';
+
 var client = firebaseConfig;
 var provider = new firebase.auth.GoogleAuthProvider();
 function signIn()
@@ -24,7 +26,7 @@ class Home extends Component {
     <div className="container-fluid">
 
       <nav className="navbar navbar-expand-lg navbar-dark" id="home">
-        <img alt="Logo" src="./Logo.jpg"width="240" height="130"/>
+        <img alt="Logo" src={logo} width="240" height="130"/>
         <a className="navbar-brand" href="">Small Art Big Support</a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
