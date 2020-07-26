@@ -1,4 +1,4 @@
-This project was created using HTML/CSS, Javascript Bootstrap, React.js.
+This project was created using HTML/CSS, Javascript Bootstrap, React.js for HobbyHacks 2020.
 
 To begin working, 
 
